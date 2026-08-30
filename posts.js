@@ -3,7 +3,7 @@
 // ─────────────────────────────────────────────────────────────
 
 const SITE = {
-  name: "Flying Fish is on the cloud",
+  name: "Flying Fish on the Cloud",
   tagline: "I write random stuff as a third person in this world",
   heroWords: ["experience", "stray thoughts", "imaginary company"], 
   about: `

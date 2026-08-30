@@ -3,16 +3,16 @@
 // ─────────────────────────────────────────────────────────────
 
 const SITE = {
-  name: "Loose Pages",
-  tagline: "a personal notebook",
-  heroWords: ["experience", "stray thoughts", "imaginary company"],
+  name: "Flying Fish is on the cloud",
+  tagline: "I write random stuff as a third person in this world",
+  heroWords: ["experience", "stray thoughts", "imaginary company"], 
   about: `
-    <p>Hi, I'm the person behind Loose Pages. This is where I keep things that
-    don't fit anywhere else — stories from my week, half-formed thoughts I
+    <p>Hi from the sky. This is where I keep things that
+    don't fit anywhere else — random stories, half-formed thoughts I
     wanted to write down before they disappeared, and the occasional visit
     from characters who exist only in my head.</p>
-    <p>There's no theme here on purpose. Some entries are true, some are
-    invented, and I'll usually tell you which is which.</p>
+    <p>There's no theme here on purpose. Some stories are true, some are
+    invented, and I usually won't tell you which is which because that line is very blurry.</p>
     <p>Say hello — <a href="mailto:you@example.com">you@example.com</a></p>
   `
 };

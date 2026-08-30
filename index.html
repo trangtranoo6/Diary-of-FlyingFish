@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loose Pages — a personal notebook</title>
+<meta name="description" content="A personal notebook of experiences, stray thoughts, and imaginary company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Literata:ital,wght@0,400;0,500;1,400&family=Caveat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-edge"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#/" data-route>
+      <span class="brand-mark" aria-hidden="true">✎</span>
+      <span class="brand-name">Loose Pages</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#/" data-route>Home</a>
+      <a href="#/blog" data-route>Blog</a>
+      <a href="#/about" data-route>About</a>
+    </nav>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <!-- the margin critter: a small recurring character who reacts in the margins -->
+  <div id="critter" class="critter" aria-hidden="true">
+    <svg viewBox="0 0 60 60" width="44" height="44">
+      <circle cx="30" cy="34" r="20" fill="var(--sage)" opacity="0.9"/>
+      <circle cx="23" cy="30" r="2.6" fill="var(--paper)"/>
+      <circle cx="37" cy="30" r="2.6" fill="var(--paper)"/>
+      <path d="M22 40 Q30 46 38 40" stroke="var(--paper)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M14 22 Q18 10 26 16" stroke="var(--sage)" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M46 22 Q42 10 34 16" stroke="var(--sage)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="critter-bubble" id="critterBubble"></div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Handwritten with care, published from a single HTML file. © <span id="year"></span></p>
+  </footer>
+
+  <script src="posts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

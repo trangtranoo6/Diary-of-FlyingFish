@@ -12,21 +12,48 @@
 </head>
 <body>
 
-  <div class="page-edge"></div>
+  <!-- decorative sky: clouds, a kite, and fish drifting behind the page -->
+  <div class="sky-scene" aria-hidden="true">
+    <svg class="cloud cloud--1" viewBox="0 0 200 90"><g fill="var(--cloud)"><ellipse cx="55" cy="55" rx="55" ry="32"/><ellipse cx="110" cy="40" rx="45" ry="35"/><ellipse cx="150" cy="58" rx="40" ry="26"/></g></svg>
+    <svg class="cloud cloud--2" viewBox="0 0 200 90"><g fill="var(--cloud)"><ellipse cx="55" cy="55" rx="55" ry="32"/><ellipse cx="110" cy="40" rx="45" ry="35"/><ellipse cx="150" cy="58" rx="40" ry="26"/></g></svg>
+    <svg class="cloud cloud--3" viewBox="0 0 200 90"><g fill="var(--cloud)"><ellipse cx="55" cy="55" rx="55" ry="32"/><ellipse cx="110" cy="40" rx="45" ry="35"/><ellipse cx="150" cy="58" rx="40" ry="26"/></g></svg>
+    <svg class="cloud cloud--4" viewBox="0 0 200 90"><g fill="var(--cloud)"><ellipse cx="55" cy="55" rx="55" ry="32"/><ellipse cx="110" cy="40" rx="45" ry="35"/><ellipse cx="150" cy="58" rx="40" ry="26"/></g></svg>
 
-  <header class="site-header">
-    <a class="brand" href="#/" data-route>
-      <span class="brand-mark" aria-hidden="true">✎</span>
-      <span class="brand-name">Loose Pages</span>
-    </a>
-    <nav class="site-nav">
-      <a href="#/" data-route>Home</a>
-      <a href="#/blog" data-route>Blog</a>
-      <a href="#/about" data-route>About</a>
-    </nav>
-  </header>
+    <svg class="kite-rig" viewBox="0 0 120 260">
+      <path d="M60 0 L100 40 L60 90 L20 40 Z" fill="var(--brick)"/>
+      <path d="M60 0 L60 90 M20 40 L100 40" stroke="rgba(43,38,32,0.25)" stroke-width="2"/>
+      <path d="M60 90 Q64 130 55 160 Q66 185 52 210 Q64 232 58 255" stroke="var(--mustard)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M52 120 l-10 8 10 8 10-8z" fill="var(--sage)"/>
+      <path d="M58 165 l-10 8 10 8 10-8z" fill="var(--mustard)"/>
+      <path d="M50 210 l-10 8 10 8 10-8z" fill="var(--sage)"/>
+    </svg>
 
-  <main id="app" class="app"></main>
+    <svg class="fish fish--1" viewBox="0 0 120 50"><g fill="var(--mustard)"><path d="M10 25 Q35 0 90 12 Q75 25 90 38 Q35 50 10 25Z"/><path d="M0 25 L14 16 L14 34 Z"/></g></svg>
+    <svg class="fish fish--2" viewBox="0 0 120 50"><g fill="var(--sage)"><path d="M10 25 Q35 0 90 12 Q75 25 90 38 Q35 50 10 25Z"/><path d="M0 25 L14 16 L14 34 Z"/></g></svg>
+    <svg class="fish fish--3" viewBox="0 0 120 50"><g fill="var(--brick)"><path d="M10 25 Q35 0 90 12 Q75 25 90 38 Q35 50 10 25Z"/><path d="M0 25 L14 16 L14 34 Z"/></g></svg>
+  </div>
+
+  <div class="sheet-wrap">
+    <div class="sheet">
+      <header class="site-header">
+        <a class="brand" href="#/" data-route>
+          <span class="brand-mark" aria-hidden="true">✎</span>
+          <span class="brand-name">Loose Pages</span>
+        </a>
+        <nav class="site-nav">
+          <a href="#/" data-route>Home</a>
+          <a href="#/blog" data-route>Blog</a>
+          <a href="#/about" data-route>About</a>
+        </nav>
+      </header>
+
+      <main id="app" class="app"></main>
+
+      <footer class="site-footer">
+        <p>Handwritten with care, published from a single HTML file. © <span id="year"></span></p>
+      </footer>
+    </div>
+  </div>
 
   <!-- the margin critter: a small recurring character who reacts in the margins -->
   <div id="critter" class="critter" aria-hidden="true">
@@ -40,10 +67,6 @@
     </svg>
     <div class="critter-bubble" id="critterBubble"></div>
   </div>
-
-  <footer class="site-footer">
-    <p>Handwritten with care, published from a single HTML file. © <span id="year"></span></p>
-  </footer>
 
   <script src="posts.js"></script>
   <script src="script.js"></script>

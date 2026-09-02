@@ -52,7 +52,7 @@ Hong Kong has taught me that you don’t necessarily need to find the “best”
 There are plenty of things I don’t like about this place, too. But my brain is all muddled now. That’s just how it is. What can I say? I’ve already grown attached to Hong Kong.
 A foreign land that, apart from the place where I was born, has somehow become a kind of soulmate to me.
 I’ll wait for the day I start hating this place so I can come back and tell you all about how terrible it is.
-Probably won’t take too long, though, because my moods are as unpredictable as Hong Kong weather.
+Probably won’t take too long, though, because my moods are as unpredictable as Hong Kong weather.</p>
       <p>Mr. Pockets does not believe in unread emails. He believes in 
   "eventually," which is a word he invented and refuses to define
       further.</p>

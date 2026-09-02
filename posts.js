@@ -5,7 +5,7 @@
 const SITE = {
   name: "Flying Fish on the Cloud",
   tagline: "I write random stuff as a third person in this world",
-  heroWords: ["experience", "stray thoughts", "imaginary company"], 
+   
   about: `
     <p>Hi from the sky. This is where I keep things that
     don't fit anywhere else — random stories, half-formed thoughts I

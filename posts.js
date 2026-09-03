@@ -41,18 +41,18 @@ const POSTS = [
     title: "Hong Kong through her kaleidoscope",
     excerpt: "He lives in my second desk drawer and has opinions about my inbox.",
    body: `
-  <p>These days, she has been blasting music while cycling around her neighborhood: Pak Shek Kok, Ma On Shan, and occasionally, when she's feeling adventurous, all the way to Sha Tin Wai. It feels like a whole new horizon has opened up. It's nothing like sitting on the MTR, a bus, or a tram and watching the city go by, and it's not quite the same as cycling back when she was in Nam Dinh either.</p>
-  <p>How does she put it? It feels incredibly free and carefree. Just her, her bike, and a road stretching along the coast. The music turns into a ribbon of sound through the Doppler effect hehe. Her brain switches into full NPC mode, just breathing in the scents of the plants and grass, mixed with the salty, fishy smell of the sea.</p>
-  <p>Now she finally understands why they call this place Fragrant Harbour.</p>
-  <p>Her friend says Hong Kong is boring, but somehow she finds it really fascinating. Maybe it's because it suits someone as bland as her. Bland people find each other, she guesses hehe.</p>
-  <p>There's something about Hong Kong that is modern yet traditional, artificial yet natural. There's the frantic pace of Central, but also those slow, unhurried weekends spent hiking and staring at the sky. Skyscrapers stand right next to mountains, and bays sit right alongside major roads.</p>
+  <p>These days, she has been blasting music while cycling around her neighborhood: Pak Shek Kok, Ma On Shan, and occasionally, when feeling adventurous, all the way to Sha Tin Wai. It feels like a whole new horizon has opened up. It's nothing like sitting on the MTR, a bus, or a tram and watching the city go by, and it's not quite the same as cycling to her highschool back in Nam Dinh either.</p>
+  <p>How does she put it? It feels incredibly free and carefree. Just her, her bike, and a road stretching along the coast. The music turns into a ribbon of sound through the Doppler effect hehe. Her brain switches into full NPC silly mode, just breathing in the scents of the plants and grass, mixed with the salty, fishy smell of the sea.</p>
+  <p>Now she finally understands why they call this place 香港（Fragrant Harbour）.</p>
+  <p>Her friends always say Hong Kong is boring, but somehow she finds it really interesting. Maybe it's because it suits someone as bland as her. Bland people find each other, she guesses hhh.</p>
+  <p>There's something about Hong Kong that is modern yet traditional, artificial yet natural. There's the frantic pace of Central, but also those slow, unhurried weekends spent hiking and staring at the sky. Skyscrapers stand right next to mountains, and bays sit right alongside highways.</p>
   <p>She doesn't know. It's contradictory, yet somehow it all makes sense, much like the way her fish brain works.</p>
   <p>She thinks they just fit.</p>
-  <p>Hong Kong has taught her that you don't necessarily need to find the "best" person according to society's standards. You just need to find someone who fits you.</p>
+  <p>Hong Kong has taught her that she doesn't necessarily need to find the "best" thing according to society's standards. She just need to find her own joy and her own people that she feels peaceful around.</p>
   <p>There are plenty of things she doesn't like about this place, too. But her brain is all muddled now. That's just how it is. What can she say? She's already grown attached to Hong Kong.</p>
-  <p>A foreign land that, apart from the place where she was born, has somehow become a kind of soulmate to her.</p>
-  <p>She'll wait for the day she starts hating this place so she can come back and tell you all about how terrible it is.</p>
-  <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather.</p>
+  <p>A foreign land that, apart from the place where she was born, has somehow become special to her.</p>
+  <p>She'll wait for the day she starts hating this place.</p>
+  <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
 `
       <p>Mr. Pockets does not believe in unread emails. He believes in 
   "eventually," which is a word he invented and refuses to define

@@ -54,13 +54,6 @@ const POSTS = [
   <p>She'll wait for the day she starts hating this place.</p>
   <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
 `
-      <p>Mr. Pockets does not believe in unread emails. He believes in 
-  "eventually," which is a word he invented and refuses to define
-      further.</p>
-      <blockquote>"You keep the tab open like it's a pet," he told me
-      yesterday. "It is not a pet. It is a chore wearing a costume."</blockquote>
-      <p>I have no rebuttal. The tab has been open for six days.</p>
-    `
   },
   {
     id: "a-list-of-things-i-noticed-today",

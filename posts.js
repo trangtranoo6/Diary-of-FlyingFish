@@ -47,8 +47,7 @@ const POSTS = [
   <p>Her friends always say Hong Kong is boring, but somehow she feels the opposite. Perhaps it suits someone as bland as her. Bland people find each other, she guesses hhh.</p>
   <p>There's something about Hong Kong that is modern yet traditional, artificial yet natural. There's the hustle of Central, but also the slow, unhurried weekends spent hiking and staring at the sky. Skyscrapers stand right next to mountains, and bays sit right alongside highways.</p>
   <p>She doesn't know. It's contradictory, yet somehow it all makes sense, much like the way her fish brain works.</p>
-  <p>She thinks they just fit.</p>
-  <p>There are plenty of things she doesn't like about this place, too. But her brain is all muddled now. That's just how it is. What can she say? She's already grown attached to Hong Kong.</p>
+  <p>There are plenty of things she doesn't like about this place, too. But her brain is all muddled now. That's just how it is. What can she say? Maybe she's already grown attached to Hong Kong.</p>
   <p>A foreign land that, apart from the place where she was born, has somehow become special to her.</p>
   <p>She'll wait for the day she starts hating this place.</p>
   <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>

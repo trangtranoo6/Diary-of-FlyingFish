@@ -4,8 +4,9 @@
 
 const SITE = {
   name: "Flying Fish on the Cloud",
-  tagline: "I write random stuff as a third person in this world",
-   
+  headline: "I write random stuff as a third person in this world",
+  tagline: "No particular order, no particular rules.",
+
   about: `
     <p>Hi from the sky. This is where I keep things that
     don't fit anywhere else — random stories, half-formed thoughts I
@@ -17,16 +18,25 @@ const SITE = {
   `
 };
 
-// Each post: id (used in the URL), date, title, tags, excerpt, and body.
+// The site's sub-branches. Add more anytime — just give it an id and a label,
+// then use that id as a post's "category" below.
+const CATEGORIES = [
+  { id: "random", label: "Fish Wander" },
+  { id: "study", label: "Fish Brain" },
+  { id: "review", label: "Random Review" }
+];
+
+// Each post: id (used in the URL), date, category (must match a CATEGORIES id),
+// title, and body. tags and excerpt are optional — leave them out if you don't
+// want them.
 // Body supports basic HTML: <p>, <h2>, <blockquote>, and
 // <em class="aside">...</em> for little handwritten-style asides.
 const POSTS = [
   {
     id: "the-day-the-elevator-agreed-with-me",
     date: "2026-09-02",
+    category: "random",
     title: "The day the elevator agreed with me",
-    tags: ["true story"],
-    excerpt: "I complained out loud about Mondays and something answered back.",
     body: `
       <p>I was the only one in the elevator, or so I thought, muttering about
       how Mondays should legally be optional, when a voice — flat, a little
@@ -36,29 +46,28 @@ const POSTS = [
     `
   },
   {
-    id: "Hong Kong through her kaleidoscope",
+    id: "hong-kong-through-her-kaleidoscope",
     date: "2024-09-30",
+    category: "random",
     title: "Hong Kong through her kaleidoscope",
-    excerpt: "He lives in my second desk drawer and has opinions about my inbox.",
-   body: `
-  <p>These days, she has been blasting music while cycling around her neighborhood: Pak Shek Kok, Ma On Shan, and occasionally, when feeling adventurous, all the way to Sha Tin Wai. It feels like a whole new horizon has opened up. It's nothing like sitting on the MTR, a bus, or a tram and watching the city go by. It's not quite the same as cycling to her highschool back in Nam Dinh either.</p>
-  <p>It feels like freedom. Just her, her bike, and the road stretching along the coast. The music turns into a ribbon of sound with Doppler effect hehe. Her brain switches into full NPC silly mode, just breathing in the scents of the plants and grass, mixed with the salty, fishy smell of the sea.</p>
-  <p>Now she finally understands why they call this place 香港（Fragrant Harbour）.</p>
-  <p>Her friends always say Hong Kong is boring, but somehow she feels the opposite. Perhaps it suits someone as bland as her. Bland people find each other, she guesses hhh.</p>
-  <p>There's something about Hong Kong that is modern yet traditional, artificial yet natural. There's the hustle of Central, but also the slow, unhurried weekends spent hiking and staring at the sky. Skyscrapers stand right next to mountains, and bays sit right alongside highways.</p>
-  <p>She doesn't know. It's contradictory, yet somehow it all makes sense, much like the way her fish brain works.</p>
-  <p>There are plenty of things she doesn't like about this place, too. But her brain is all muddled now. That's just how it is. What can she say? Maybe she's already grown attached to Hong Kong.</p>
-  <p>A foreign land that, apart from the place where she was born, has somehow become special to her.</p>
-  <p>She'll wait for the day she starts hating this place.</p>
-  <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
-`
+    body: `
+      <p>These days, she has been blasting music while cycling around her neighborhood: Pak Shek Kok, Ma On Shan, and occasionally, when feeling adventurous, all the way to Sha Tin Wai. It feels like a whole new horizon has opened up. It's nothing like sitting on the MTR, a bus, or a tram and watching the city go by. It's not quite the same as cycling to her highschool back in Nam Dinh either.</p>
+      <p>It feels like freedom. Just her, her bike, and the road stretching along the coast. The music turns into a ribbon of sound with Doppler effect hehe. Her brain switches into full NPC silly mode, just breathing in the scents of the plants and grass, mixed with the salty, fishy smell of the sea.</p>
+      <p>Now she finally understands why they call this place 香港（Fragrant Harbour）.</p>
+      <p>Her friends always say Hong Kong is boring, but somehow she feels the opposite. Perhaps it suits someone as bland as her. Bland people find each other, she guesses hhh.</p>
+      <p>There's something about Hong Kong that is modern yet traditional, artificial yet natural. There's the hustle of Central, but also the slow, unhurried weekends spent hiking and staring at the sky. Skyscrapers stand right next to mountains, and bays sit right alongside highways.</p>
+      <p>She doesn't know. It's contradictory, yet somehow it all makes sense, much like the way her fish brain works.</p>
+      <p>There are plenty of things she doesn't like about this place, too. But her brain is all muddled now. That's just how it is. What can she say? Maybe she's already grown attached to Hong Kong.</p>
+      <p>A foreign land that, apart from the place where she was born, has somehow become special to her.</p>
+      <p>She'll wait for the day she starts hating this place.</p>
+      <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
+    `
   },
   {
     id: "a-list-of-things-i-noticed-today",
     date: "2026-08-11",
+    category: "random",
     title: "A list of things I noticed today",
-    tags: ["random"],
-    excerpt: "No theme. Just noticing.",
     body: `
       <p>The bakery downstairs changes its smell by the hour — bread in the
       morning, something like caramel by four.</p>
@@ -67,6 +76,28 @@ const POSTS = [
       <h2>Small thought</h2>
       <p>Maybe a good day is just several unremarkable things arranged
       nicely.</p>
+    `
+  },
+  {
+    id: "sample-study-entry",
+    date: "2026-01-01",
+    category: "study",
+    title: "(placeholder) delete me — this shows how Study posts look",
+    body: `
+      <p>This is a placeholder so you can see how a Study entry appears on the
+      site. Delete this whole object from posts.js once you've written your
+      first real one — just copy this structure and swap in your own
+      title, date, and body.</p>
+    `
+  },
+  {
+    id: "sample-review-entry",
+    date: "2026-01-01",
+    category: "review",
+    title: "(placeholder) delete me — this shows how Review posts look",
+    body: `
+      <p>Same idea — this is just here so the Review branch isn't empty.
+      Swap this out for an actual review whenever you're ready.</p>
     `
   }
 ];

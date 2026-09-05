@@ -1,12 +1,14 @@
 :root {
   --paper: #FDFBF6;
   --paper-2: #F6F0E2;
-  --ink: #2B2620;
-  --ink-soft: #5A5346;
+  --ink: #1C2A44;
+  --ink-soft: #2C3E60;
   --sage: #5F7350;
+  --sage-text: #2B3D22;
   --mustard: #C99A3A;
   --brick: #A65D57;
-  --line: #D8CDB5;
+  --brick-text: #74302A;
+  --line: rgba(28, 42, 68, 0.18);
 
   --sky-top: #6FB3E8;
   --sky-mid: #9BD1F0;
@@ -33,6 +35,7 @@ body {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
+  text-shadow: 0 1px 8px rgba(255,255,255,0.4);
 }
 
 /* soft sun glow, no external image */
@@ -96,24 +99,16 @@ body::before {
   .kite-rig { width: 90px; right: 4%; }
 }
 
-/* ---------- floating notebook sheet ---------- */
+/* ---------- content wrapper (no card — floats on the sky) ---------- */
 .sheet-wrap {
   position: relative;
   z-index: 2;
   max-width: 960px;
-  margin: 2.5rem auto;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 .sheet {
-  background: rgba(253, 251, 246, 0.93);
-  backdrop-filter: blur(3px);
-  border-radius: 22px;
-  box-shadow: 0 18px 40px rgba(20, 60, 90, 0.18), 0 2px 0 rgba(255,255,255,0.6) inset;
-  overflow: hidden;
-}
-@media (max-width: 640px) {
-  .sheet-wrap { margin: 1rem auto; padding: 0 0.6rem; }
-  .sheet { border-radius: 16px; }
+  background: transparent;
 }
 
 a { color: inherit; }
@@ -137,10 +132,15 @@ a { color: inherit; }
   text-decoration: none;
   color: var(--ink);
 }
+/* soft glow so headings lift off the sky without needing a box behind them */
+.hero h1, .entry-title, .post-title, .brand-name, .about-wrap h1 {
+  text-shadow: 0 2px 14px rgba(255,255,255,0.65), 0 1px 0 rgba(255,255,255,0.3);
+}
+
 .brand-mark {
   font-family: var(--hand);
   font-size: 1.6rem;
-  color: var(--brick);
+  color: var(--brick-text);
   transform: rotate(-8deg);
   display: inline-block;
 }
@@ -187,7 +187,7 @@ a { color: inherit; }
 }
 .hero-eyebrow {
   font-family: var(--hand);
-  color: var(--brick);
+  color: var(--brick-text);
   font-size: 1.3rem;
   transform: rotate(-1deg);
   display: inline-block;
@@ -203,7 +203,7 @@ a { color: inherit; }
 }
 .hero h1 em {
   font-style: italic;
-  color: var(--sage);
+  color: var(--sage-text);
 }
 .hero p {
   max-width: 46ch;
@@ -212,6 +212,45 @@ a { color: inherit; }
 }
 
 /* ---------- entry cards ---------- */
+.entry-tag--cat {
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.55);
+  color: var(--brick-text);
+}
+
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.1rem 0 1.6rem;
+}
+.pill {
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ink);
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.55);
+  backdrop-filter: blur(3px);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  transition: all 0.15s ease;
+}
+.pill:hover { background: rgba(255,255,255,0.55); border-color: var(--sage); }
+.pill--active {
+  background: var(--sage);
+  color: #fff;
+  border-color: var(--sage);
+}
+
+.hand-note {
+  font-family: var(--hand);
+  font-size: 1.3rem;
+  color: var(--ink-soft);
+  padding: 1.5rem 0;
+}
+
 .section-label {
   font-family: var(--ui);
   text-transform: uppercase;
@@ -245,15 +284,16 @@ a { color: inherit; }
 .entry-date {
   font-family: var(--hand);
   font-size: 1.15rem;
-  color: var(--brick);
+  color: var(--brick-text);
 }
 .entry-tag {
   font-family: var(--ui);
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--sage);
-  background: rgba(95,115,80,0.1);
+  color: var(--sage-text);
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.5);
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
 }
@@ -265,7 +305,7 @@ a { color: inherit; }
   margin: 0 0 0.35rem;
   transition: color 0.15s ease;
 }
-.entry-card:hover .entry-title { color: var(--sage); }
+.entry-card:hover .entry-title { color: var(--sage-text); }
 
 .entry-excerpt {
   color: var(--ink-soft);
@@ -278,7 +318,7 @@ a { color: inherit; }
 .post-date {
   font-family: var(--hand);
   font-size: 1.3rem;
-  color: var(--brick);
+  color: var(--brick-text);
 }
 .post-title {
   font-family: var(--display);
@@ -310,7 +350,7 @@ a { color: inherit; }
   font-family: var(--hand);
   font-style: normal;
   font-size: 1.15rem;
-  color: var(--sage);
+  color: var(--sage-text);
 }
 
 .back-link {
@@ -337,7 +377,7 @@ a { color: inherit; }
 
 /* ---------- 404 ---------- */
 .not-found { padding: 3rem 0; text-align: center; }
-.not-found p.hand { font-family: var(--hand); font-size: 1.6rem; color: var(--brick); }
+.not-found p.hand { font-family: var(--hand); font-size: 1.6rem; color: var(--brick-text); }
 
 /* ---------- margin critter ---------- */
 .critter {

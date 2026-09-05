@@ -32,15 +32,24 @@ function sortedPosts() {
   return [...POSTS].sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
+function categoryLabel(id) {
+  const cat = (CATEGORIES || []).find(c => c.id === id);
+  return cat ? cat.label : null;
+}
+
 function entryCard(post) {
+  const tags = post.tags || [];
+  const excerpt = post.excerpt || '';
+  const catLabel = categoryLabel(post.category);
   return `
     <a class="entry-card" href="#/post/${post.id}" data-route>
       <div class="entry-meta">
         <span class="entry-date">${fmtDate(post.date)}</span>
-        ${post.tags.map(t => `<span class="entry-tag">${t}</span>`).join('')}
+        ${catLabel ? `<span class="entry-tag entry-tag--cat">${catLabel}</span>` : ''}
+        ${tags.map(t => `<span class="entry-tag">${t}</span>`).join('')}
       </div>
       <h3 class="entry-title">${post.title}</h3>
-      <p class="entry-excerpt">${post.excerpt}</p>
+      ${excerpt ? `<p class="entry-excerpt">${excerpt}</p>` : ''}
     </a>
   `;
 }
@@ -49,10 +58,12 @@ function renderHome() {
   const latest = sortedPosts().slice(0, 5);
   app.innerHTML = `
     <section class="hero">
-      <span class="hero-eyebrow">welcome in —</span>
-      <h1>Bits of <em>${SITE.heroWords[0]}</em>, unfiled thoughts,<br>
-      and the odd word from <em>${SITE.heroWords[2]}</em>.</h1>
-      <p>${SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}. No particular order, no particular rules.</p>
+      <span class="hero-eyebrow">${SITE.name} —</span>
+      <h1>${SITE.headline}</h1>
+      <p>${SITE.tagline}</p>
+      <div class="category-pills">
+        ${(CATEGORIES || []).map(c => `<a class="pill" href="#/category/${c.id}" data-route>${c.label}</a>`).join('')}
+      </div>
     </section>
     <p class="section-label">Latest entries</p>
     <div class="entries">${latest.map(entryCard).join('')}</div>
@@ -64,7 +75,28 @@ function renderHome() {
 function renderBlog() {
   app.innerHTML = `
     <p class="section-label">All entries</p>
+    <div class="category-pills">
+      <a class="pill pill--active" href="#/blog" data-route>All</a>
+      ${(CATEGORIES || []).map(c => `<a class="pill" href="#/category/${c.id}" data-route>${c.label}</a>`).join('')}
+    </div>
     <div class="entries">${sortedPosts().map(entryCard).join('')}</div>
+  `;
+  sayCritter('blog');
+  sayCritter._last = 'blog';
+}
+
+function renderCategory(id) {
+  const cat = (CATEGORIES || []).find(c => c.id === id);
+  const posts = sortedPosts().filter(p => p.category === id);
+  app.innerHTML = `
+    <p class="section-label">${cat ? cat.label : id}</p>
+    <div class="category-pills">
+      <a class="pill" href="#/blog" data-route>All</a>
+      ${(CATEGORIES || []).map(c => `<a class="pill ${c.id === id ? 'pill--active' : ''}" href="#/category/${c.id}" data-route>${c.label}</a>`).join('')}
+    </div>
+    <div class="entries">
+      ${posts.length ? posts.map(entryCard).join('') : `<p class="hand-note">nothing filed here yet — check back soon.</p>`}
+    </div>
   `;
   sayCritter('blog');
   sayCritter._last = 'blog';
@@ -79,7 +111,10 @@ function renderPost(id) {
       <header class="post-header">
         <span class="post-date">${fmtDate(post.date)}</span>
         <h1 class="post-title">${post.title}</h1>
-        <div class="post-tags">${post.tags.map(t => `<span class="entry-tag">${t}</span>`).join('')}</div>
+        <div class="post-tags">
+          ${categoryLabel(post.category) ? `<span class="entry-tag entry-tag--cat">${categoryLabel(post.category)}</span>` : ''}
+          ${(post.tags && post.tags.length) ? post.tags.map(t => `<span class="entry-tag">${t}</span>`).join('') : ''}
+        </div>
       </header>
       <div class="post-body">${post.body}</div>
     </article>
@@ -107,12 +142,9 @@ function renderNotFound() {
 }
 
 function setActiveNav(route) {
-  document.querySelectorAll('.site-nav a').forEach(a => a.classList.remove('active'));
-  const map = { '': 0, 'blog': 1, 'about': 2 };
-  const links = document.querySelectorAll('.site-nav a');
-  if (route === '' && links[0]) links[0].classList.add('active');
-  if (route === 'blog' && links[1]) links[1].classList.add('active');
-  if (route === 'about' && links[2]) links[2].classList.add('active');
+  document.querySelectorAll('.site-nav a').forEach(a => {
+    a.classList.toggle('active', a.dataset.navkey === route);
+  });
 }
 
 function router() {
@@ -123,6 +155,7 @@ function router() {
   if (parts.length === 0) { renderHome(); setActiveNav(''); return; }
   if (parts[0] === 'blog') { renderBlog(); setActiveNav('blog'); return; }
   if (parts[0] === 'about') { renderAbout(); setActiveNav('about'); return; }
+  if (parts[0] === 'category' && parts[1]) { renderCategory(decodeURIComponent(parts[1])); setActiveNav('blog'); return; }
   if (parts[0] === 'post' && parts[1]) { renderPost(decodeURIComponent(parts[1])); setActiveNav(''); return; }
   renderNotFound();
 }

@@ -13,7 +13,7 @@ const SITE = {
     wanted to write down before they disappeared, and the occasional visit
     from characters who exist only in my head.</p>
     <p>There's no theme here on purpose. Some stories are true, some are
-    invented, and I usually won't tell you which is which, because I don't like to :D </p>
+    invented, and I usually won't tell you which is which, because I don't like to =))) </p>
     <p>Say hello — <a href="mailto:paigetran0605@gmail.com">paigetran0605@gmail.com</a></p>
   `
 };
@@ -23,7 +23,7 @@ const SITE = {
 const CATEGORIES = [
   { id: "random", label: "Fish Wander" },
   { id: "study", label: "Fish Brain" },
-  { id: "review", label: "Random Reviews" }
+  { id: "review", label: "Random Review" }
 ];
 
 // Each post: id (used in the URL), date, category (must match a CATEGORIES id),
@@ -32,6 +32,19 @@ const CATEGORIES = [
 // Body supports basic HTML: <p>, <h2>, <blockquote>, and
 // <em class="aside">...</em> for little handwritten-style asides.
 const POSTS = [
+  {
+    id: "the-day-the-elevator-agreed-with-me",
+    date: "2026-09-02",
+    category: "random",
+    title: "The day the elevator agreed with me",
+    body: `
+      <p>I was the only one in the elevator, or so I thought, muttering about
+      how Mondays should legally be optional, when a voice — flat, a little
+      bored — said "agreed." I have decided not to investigate this further.</p>
+      <p>Some days you get an answer you didn't ask for and you just take it.</p>
+      <em class="aside">— filed under: things I'm choosing not to explain</em>
+    `
+  },
   {
     id: "hong-kong-through-her-kaleidoscope",
     date: "2024-09-30",
@@ -50,7 +63,7 @@ const POSTS = [
       <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
     `
   },
-  //{
+  {
     id: "a-list-of-things-i-noticed-today",
     date: "2026-08-11",
     category: "random",

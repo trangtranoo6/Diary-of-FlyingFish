@@ -32,7 +32,7 @@ const CATEGORIES = [
 // Body supports basic HTML: <p>, <h2>, <blockquote>, and
 // <em class="aside">...</em> for little handwritten-style asides.
 const POSTS = [
-  {
+ /* {
     id: "the-day-the-elevator-agreed-with-me",
     date: "2026-09-02",
     category: "random",
@@ -45,6 +45,7 @@ const POSTS = [
       <em class="aside">— filed under: things I'm choosing not to explain</em>
     `
   },
+  */
   {
     id: "hong-kong-through-her-kaleidoscope",
     date: "2024-09-30",
@@ -62,7 +63,8 @@ const POSTS = [
       <p>She'll wait for the day she starts hating this place.</p>
       <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
     `
-  },
+  }
+  /*,
   {
     id: "a-list-of-things-i-noticed-today",
     date: "2026-08-11",
@@ -100,4 +102,5 @@ const POSTS = [
       Swap this out for an actual review whenever you're ready.</p>
     `
   }
+  */
 ];

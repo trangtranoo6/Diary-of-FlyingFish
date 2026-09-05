@@ -3,7 +3,6 @@
 // ─────────────────────────────────────────────────────────────
 
 const app = document.getElementById('app');
-document.getElementById('year').textContent = new Date().getFullYear();
 
 const CRITTER_LINES = {
   home: ["hi. i live in the corner.", "nothing to report yet.", "the drawer says hello."],

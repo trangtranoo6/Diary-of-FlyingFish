@@ -52,16 +52,16 @@ const POSTS = [
     category: "random",
     title: "Hong Kong through her kaleidoscope",
     body: `
-      <p>These days, she has been blasting music while cycling around her neighborhood: Pak Shek Kok, Ma On Shan, and occasionally, when feeling adventurous, all the way to Sha Tin Wai. It feels like a whole new horizon has opened up. It's nothing like sitting on the MTR, a bus, or a tram and watching the city go by. It's not quite the same as cycling to her highschool back in Nam Dinh either.</p>
-      <p>It feels like freedom. Just her, her bike, and the road stretching along the coast. The music turns into a ribbon of sound with Doppler effect hehe. Her brain switches into full NPC silly mode, just breathing in the scents of the plants and grass, mixed with the salty, fishy smell of the sea.</p>
-      <p>Now she finally understands why they call this place 香港（Fragrant Harbour）.</p>
-      <p>Her friends always say Hong Kong is boring, but somehow she feels the opposite. Perhaps it suits someone as bland as her. Bland people find each other, she guesses hhh.</p>
-      <p>There's something about Hong Kong that is modern yet traditional, artificial yet natural. There's the hustle of Central, but also the slow, unhurried weekends spent hiking and staring at the sky. Skyscrapers stand right next to mountains, and bays sit right alongside highways.</p>
-      <p>She doesn't know. It's contradictory, yet somehow it all makes sense, much like the way her fish brain works.</p>
-      <p>There are plenty of things she doesn't like about this place, too. But her brain is all muddled now. That's just how it is. What can she say? Maybe she's already grown attached to Hong Kong.</p>
-      <p>A foreign land that, apart from the place where she was born, has somehow become special to her.</p>
-      <p>She'll wait for the day she starts hating this place.</p>
-      <p>Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
+      <p>These days, she has been blasting music while cycling around her neighborhood: Pak Shek Kok, Ma On Shan, and occasionally, when feeling adventurous, all the way to Sha Tin Wai. It feels like a whole new horizon has opened up. It's nothing like sitting on the MTR, a bus, or a tram and watching the city go by. It's not quite the same as cycling to her highschool back in Nam Dinh either.
+      How to describe, it feels like freedom. Just her, her bike, and the road stretching along the coast. The music turns into a ribbon of sound with Doppler effect =)). Her brain switches into full NPC silly mode, just breathing in the scents of the plants and grass, mixed with the salty, fishy smell of the sea.
+      Now she finally understands why they call this place 香港（Fragrant Harbour）.</p>
+      <p>Her friends always say Hong Kong is boring, but somehow she feels the opposite. Perhaps it suits someone as bland as her. Bland people find each other, she guesses =)).</p>
+      There's something about Hong Kong that is modern yet traditional, artificial yet natural. There's the hustle of Central, but also the slow, unhurried weekends spent hiking and staring at the sky. Skyscrapers stand right next to mountains, and bays sit right alongside highways.
+      It's contradictory, yet somehow it all makes sense, much like the way her fish brain works.</p>
+      <p>There are plenty of things she doesn't like about this place, too. But her brain is all muddled now. That's just how it is. What can she say? Maybe she's already grown attached to Hong Kong.
+      A foreign land that, apart from the place where she was born, has somehow become special to her.
+      She'll wait for the day she starts hating this place.
+      Probably won't take too long, though, because her moods are as unpredictable as Hong Kong weather (Just kidding =))). But Hong Kong weather is unpredictable for real :3 </p>
     `
   }
   /*,
